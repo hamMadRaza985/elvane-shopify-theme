@@ -52,7 +52,8 @@
   "settings":{
     "default_logo": "Default logo",
     "desktop_logo_width": "Custom logo width (in pixels)",
-    "desktop_logo_height": "Custom logo height (in pixels)"
+    "desktop_logo_height": "Custom logo height (in pixels)",
+    "favicon": "Favicon"
   },
 
   "labels": {
