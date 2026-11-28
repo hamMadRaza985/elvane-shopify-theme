@@ -11,14 +11,14 @@
     "name": "t:general.typography",
     "settings": [
       {
+        "type": "header",
+        "content": "t:general.fonts"
+      },
+      {
         "type": "font_picker",
         "id": "type_heading_font",
         "default":"cormorant_garamond_n5",
         "label": "heading"
-      },
-      {
-        "type": "header",
-        "content": "t:general.fonts"
       },
       {
         "type": "font_picker",
