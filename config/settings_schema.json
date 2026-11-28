@@ -18,7 +18,19 @@
           "type": "image_picker",
           "id": "logo",
           "label": "t:settings.default_logo"
-        }
+        },
+        {
+      "type": "text",
+      "id": "logo_desktop_width",
+      "label": "t:settings.desktop_logo_width",
+      "default": "450"
+    },
+      {
+      "type": "text",
+      "id": "logo_desktop_height",
+      "label": "t:settings.desktop_logo_height",
+      "default": "97"
+    },
     ]
   },
   {
