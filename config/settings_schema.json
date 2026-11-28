@@ -1,152 +1,89 @@
-
 [
   {
     "name": "theme_info",
-    "theme_name": "ELVANE",
-    "theme_version": "0.2.0",
-    "theme_author": "ELVANE",
+    "theme_name": "Skeleton",
+    "theme_version": "0.1.0",
+    "theme_author": "Shopify",
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
-    "theme_support_url": "https://help.shopify.com/"
+    "theme_support_url": "https://support.shopify.com/"
   },
   {
-    "name": "Typography",
+    "name": "t:general.typography",
     "settings": [
+      {
+        "type": "header",
+        "content": "t:general.fonts"
+      },
       {
         "type": "font_picker",
         "id": "type_heading_font",
-        "default": "cormorant_garamond_n5",
-        "label": "Heading font"
+        "default":"cormorant_garamond_n5",
+        "label": "heading"
       },
       {
         "type": "font_picker",
         "id": "type_primary_font",
-        "default": "inter_n4",
-        "label": "Body and interface font"
+        "default": "work_sans_n4",
+        "label": "t:general.primary"
       },
-      {
-        "type": "range",
-        "id": "heading_scale",
-        "min": 80,
-        "max": 140,
-        "step": 5,
-        "unit": "%",
-        "label": "Heading scale",
-        "default": 100
-      },
-      {
-        "type": "range",
-        "id": "body_scale",
-        "min": 85,
-        "max": 120,
-        "step": 5,
-        "unit": "%",
-        "label": "Body text scale",
-        "default": 100
-      }
     ]
   },
   {
-    "name": "Layout",
+    "name": "t:general.layout",
     "settings": [
       {
         "type": "select",
         "id": "max_page_width",
-        "label": "Maximum page width",
+        "label": "t:labels.page_width",
         "options": [
-          {"value": "90rem", "label": "Narrow"},
-          {"value": "110rem", "label": "Wide"},
-          {"value": "120rem", "label": "Extra wide"}
+          {
+            "value": "90rem",
+            "label": "t:options.page_width.narrow"
+          },
+          {
+            "value": "110rem",
+            "label": "t:options.page_width.wide"
+          }
         ],
-        "default": "110rem"
+        "default": "90rem"
       },
       {
         "type": "range",
         "id": "min_page_margin",
-        "min": 12,
-        "max": 64,
-        "step": 2,
+        "min": 10,
+        "max": 100,
+        "step": 1,
         "unit": "px",
-        "label": "Page side spacing",
-        "default": 24
+        "label": "t:labels.page_margin",
+        "default": 20
+      }
+    ]
+  },
+  {
+    "name": "t:general.colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "default": "#FFFFFF",
+        "label": "t:labels.background"
       },
       {
-        "type": "range",
-        "id": "section_spacing",
-        "min": 24,
-        "max": 120,
-        "step": 4,
-        "unit": "px",
-        "label": "Default section spacing",
-        "default": 64
+        "type": "color",
+        "id": "foreground_color",
+        "default": "#333333",
+        "label": "t:labels.foreground"
       },
       {
         "type": "range",
         "id": "input_corner_radius",
         "min": 0,
-        "max": 24,
+        "max": 10,
         "step": 1,
         "unit": "px",
-        "label": "Input corner radius",
+        "label": "t:labels.input_corner_radius",
         "default": 4
-      },
-      {
-        "type": "range",
-        "id": "button_corner_radius",
-        "min": 0,
-        "max": 40,
-        "step": 1,
-        "unit": "px",
-        "label": "Button corner radius",
-        "default": 2
       }
     ]
-  },
-  // {
-  //   "name": "Colors",
-  //   "settings": [
-  //     {
-  //       "type": "color_scheme_group",
-  //       "id": "color_schemes",
-  //       "definition": [
-  //         {"type": "color", "id": "background", "label": "Background", "default": "#0B0B0B"},
-  //         {"type": "color", "id": "text", "label": "Text", "default": "#F5F2EB"},
-  //         {"type": "color", "id": "solid_button_background", "label": "Button background", "default": "#C6A15B"},
-  //         {"type": "color", "id": "solid_button_text", "label": "Button text", "default": "#0B0B0B"},
-  //         {"type": "color", "id": "outline_button", "label": "Outline button", "default": "#F5F2EB"},
-  //         {"type": "color", "id": "border", "label": "Borders", "default": "#333333"},
-  //         {"type": "color", "id": "shadow", "label": "Shadows", "default": "#000000"}
-  //       ],
-  //     },
-  //     {
-  //       "type": "color",
-  //       "id": "surface_color",
-  //       "default": "#191919",
-  //       "label": "Card background"
-  //     },
-  //     {
-  //       "type": "color",
-  //       "id": "surface_alt_color",
-  //       "default": "#111111",
-  //       "label": "Alternate background"
-  //     },
-  //     {
-  //       "type": "color",
-  //       "id": "accent_color",
-  //       "default": "#C6A15B",
-  //       "label": "Accent color"
-  //     },
-  //     {
-  //       "type": "color",
-  //       "id": "accent_hover_color",
-  //       "default": "#E5C98B",
-  //       "label": "Accent hover"
-  //     },
-  //     {
-  //       "type": "color",
-  //       "id": "muted_text_color",
-  //       "default": "#929292",
-  //       "label": "Secondary text"
-  //     }
-  //   ]
-  // }
+  }
 ]
