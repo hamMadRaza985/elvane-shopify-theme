@@ -7,27 +7,254 @@
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
     "theme_support_url": "https://support.shopify.com/"
   },
-  {
-    "name": "t:general.typography",
-    "settings": [
-      {
-        "type": "header",
-        "content": "t:general.fonts"
-      },
-      {
-        "type": "font_picker",
-        "id": "type_heading_font",
-        "default":"cormorant_garamond_n5",
-        "label": "heading"
-      },
-      {
-        "type": "font_picker",
-        "id": "type_primary_font",
-        "default": "work_sans_n4",
-        "label": "t:general.primary"
-      },
-    ]
-  },
+ 
+{
+  "name": "t:general.typography",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Font families"
+    },
+    {
+      "type": "font_picker",
+      "id": "type_heading_font",
+      "default": "cormorant_garamond_n5",
+      "label": "Heading font"
+    },
+    {
+      "type": "font_picker",
+      "id": "type_primary_font",
+      "default": "work_sans_n4",
+      "label": "Body font"
+    },
+    {
+      "type": "font_picker",
+      "id": "type_navigation_font",
+      "default": "work_sans_n4",
+      "label": "Navigation font"
+    },
+    {
+      "type": "font_picker",
+      "id": "type_button_font",
+      "default": "work_sans_n4",
+      "label": "Button font"
+    },
+    {
+      "type": "header",
+      "content": "Heading typography"
+    },
+    {
+      "type": "select",
+      "id": "heading_font_weight",
+      "label": "Heading font weight",
+      "options": [
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi-bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 28,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "label": "Desktop heading size",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "heading_mobile_size",
+      "min": 22,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile heading size",
+      "default": 34
+    },
+    {
+      "type": "range",
+      "id": "heading_scale",
+      "min": 100,
+      "max": 140,
+      "step": 5,
+      "unit": "%",
+      "label": "Heading size scale",
+      "default": 115
+    },
+    {
+      "type": "range",
+      "id": "heading_line_height",
+      "min": 0.9,
+      "max": 1.5,
+      "step": 0.1,
+      "label": "Heading line height",
+      "default": 1.1
+    },
+    {
+      "type": "range",
+      "id": "heading_letter_spacing",
+      "min": -2,
+      "max": 4,
+      "step": 0.1,
+      "unit": "px",
+      "label": "Heading letter spacing",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Body typography"
+    },
+    {
+      "type": "select",
+      "id": "body_font_weight",
+      "label": "Body font weight",
+      "options": [
+        { "value": "300", "label": "Light" },
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi-bold" }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Desktop body size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "body_mobile_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile body size",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "body_line_height",
+      "min": 1.2,
+      "max": 2.0,
+      "step": 0.1,
+      "label": "Body line height",
+      "default": 1.6
+    },
+    {
+      "type": "range",
+      "id": "body_letter_spacing",
+      "min": -1,
+      "max": 3,
+      "step": 0.1,
+      "unit": "px",
+      "label": "Body letter spacing",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Navigation typography"
+    },
+    {
+      "type": "select",
+      "id": "navigation_font_weight",
+      "label": "Navigation font weight",
+      "options": [
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi-bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "range",
+      "id": "navigation_size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Navigation font size",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "navigation_letter_spacing",
+      "min": 0,
+      "max": 3,
+      "step": 0.1,
+      "unit": "px",
+      "label": "Navigation letter spacing",
+      "default": 0.5
+    },
+    {
+      "type": "select",
+      "id": "navigation_text_transform",
+      "label": "Navigation text style",
+      "options": [
+        { "value": "none", "label": "Normal" },
+        { "value": "uppercase", "label": "Uppercase" },
+        { "value": "capitalize", "label": "Capitalize" }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "header",
+      "content": "Button typography"
+    },
+    {
+      "type": "select",
+      "id": "button_font_weight",
+      "label": "Button font weight",
+      "options": [
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi-bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "range",
+      "id": "button_size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Button font size",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "button_letter_spacing",
+      "min": 0,
+      "max": 3,
+      "step": 0.1,
+      "unit": "px",
+      "label": "Button letter spacing",
+      "default": 0.5
+    },
+    {
+      "type": "select",
+      "id": "button_text_transform",
+      "label": "Button text style",
+      "options": [
+        { "value": "none", "label": "Normal" },
+        { "value": "uppercase", "label": "Uppercase" },
+        { "value": "capitalize", "label": "Capitalize" }
+      ],
+      "default": "uppercase"
+    }
+  ]
+},
   {
     "name": "t:general.layout",
     "settings": [
