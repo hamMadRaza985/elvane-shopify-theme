@@ -32,8 +32,18 @@
     "sidebar": "Sidebar",
     "text": "Text",
     "theme": "Theme",
-    "typography": "Typography"
+    "typography": "Typography",
+    "logo_and_favicon": "Logo and favIcon"
   },
+
+  "content":{
+    "manage_store_name": "[Manage store name](/admin/settings/general?edit=storeName)"
+  },
+
+  "settings":{
+    "default_logo": "Default logo"
+  },
+
   "labels": {
     "alignment": "Alignment",
     "background": "Background",
