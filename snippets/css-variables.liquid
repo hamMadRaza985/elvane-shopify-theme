@@ -1,14 +1,61 @@
+
+{% liquid
+  assign heading_font = settings.type_heading_font
+  assign body_font = settings.type_primary_font
+  assign navigation_font = settings.type_navigation_font
+  assign button_font = settings.type_button_font
+%}
+
 {% style %}
-  {% # Loads all font variantions with display: swap %}
-  {{ settings.type_primary_font | font_face: font_display: 'swap' }}
-  {{ settings.type_primary_font | font_modify: 'weight', 'bold' | font_face: font_display: 'swap' }}
-  {{ settings.type_primary_font | font_modify: 'weight', 'bold' | font_modify: 'style', 'italic' | font_face: font_display: 'swap' }}
-  {{ settings.type_primary_font | font_modify: 'style', 'italic' | font_face: font_display: 'swap' }}
+  {{ heading_font | font_face: font_display: 'swap' }}
+  {{ heading_font | font_modify: 'weight', 'bold' | font_face: font_display: 'swap' }}
+  {{ heading_font | font_modify: 'style', 'italic' | font_face: font_display: 'swap' }}
+
+  {{ body_font | font_face: font_display: 'swap' }}
+  {{ body_font | font_modify: 'weight', 'bold' | font_face: font_display: 'swap' }}
+  {{ body_font | font_modify: 'style', 'italic' | font_face: font_display: 'swap' }}
+
+  {{ navigation_font | font_face: font_display: 'swap' }}
+  {{ navigation_font | font_modify: 'weight', 'bold' | font_face: font_display: 'swap' }}
+
+  {{ button_font | font_face: font_display: 'swap' }}
+  {{ button_font | font_modify: 'weight', 'bold' | font_face: font_display: 'swap' }}
 
   :root {
-    --font-primary--family: {{ settings.type_primary_font.family }}, {{ settings.type_primary_font.fallback_families }};
-    --font-primary--style: {{ settings.type_primary_font.style }};
-    --font-primary--weight: {{ settings.type_primary_font.weight }};
+    /* Font families */
+    --font-heading-family: {{ heading_font.family }}, {{ heading_font.fallback_families }};
+    --font-primary--family: {{ body_font.family }}, {{ body_font.fallback_families }};
+    --font-navigation-family: {{ navigation_font.family }}, {{ navigation_font.fallback_families }};
+    --font-button-family: {{ button_font.family }}, {{ button_font.fallback_families }};
+
+    /* Heading settings */
+    --font-heading-weight: {{ settings.heading_font_weight }};
+    --font-heading-size: {{ settings.heading_size }}px;
+    --font-heading-mobile-size: {{ settings.heading_mobile_size }}px;
+    --font-heading-scale: {{ settings.heading_scale | divided_by: 100.0 }};
+    --font-heading-line-height: {{ settings.heading_line_height }};
+    --font-heading-letter-spacing: {{ settings.heading_letter_spacing }}px;
+
+    /* Body settings */
+    --font-primary--weight: {{ settings.body_font_weight }};
+    --font-body-size: {{ settings.body_size }}px;
+    --font-body-mobile-size: {{ settings.body_mobile_size }}px;
+    --font-body-line-height: {{ settings.body_line_height }};
+    --font-body-letter-spacing: {{ settings.body_letter_spacing }}px;
+
+    /* Navigation settings */
+    --font-navigation-weight: {{ settings.navigation_font_weight }};
+    --font-navigation-size: {{ settings.navigation_size }}px;
+    --font-navigation-letter-spacing: {{ settings.navigation_letter_spacing }}px;
+    --font-navigation-transform: {{ settings.navigation_text_transform }};
+
+    /* Button settings */
+    --font-button-weight: {{ settings.button_font_weight }};
+    --font-button-size: {{ settings.button_size }}px;
+    --font-button-letter-spacing: {{ settings.button_letter_spacing }}px;
+    --font-button-transform: {{ settings.button_text_transform }};
+
+    /* Existing theme settings */
     --page-width: {{ settings.max_page_width }};
     --page-margin: {{ settings.min_page_margin }}px;
     --color-background: {{ settings.background_color }};
