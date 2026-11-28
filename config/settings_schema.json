@@ -12,7 +12,7 @@
     "settings": [
         {
           "type": "paragraph",
-          "content": "t:content.Manage_store_name"
+          "content": "t:content.manage_store_name"
         },
         {
           "type": "image_picker",
